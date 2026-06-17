@@ -1,0 +1,110 @@
+[
+  {
+    "id": "pub_1935_stage_program",
+    "time": "19:35",
+    "label": "Stage program begins",
+    "description": "Evelyn, Felix, and Lena appear before the atrium audience.",
+    "locationId": "grand_atrium",
+    "characterIds": ["evelyn_vale", "felix_ward", "lena_ortiz"],
+    "evidenceIds": ["E034", "E035"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 1
+  },
+  {
+    "id": "pub_1942_corridor_incident",
+    "time": "19:42",
+    "label": "Minor corridor incident reported",
+    "description": "Witnesses describe Simon being jostled near Service Corridor C but continuing the gala.",
+    "locationId": "service_corridor_c",
+    "characterIds": ["simon_vale", "sophie_park", "clara_finch"],
+    "evidenceIds": ["E062", "E083"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 2
+  },
+  {
+    "id": "pub_2005_speech",
+    "time": "20:05",
+    "label": "Simon gives keynote speech",
+    "description": "Simon speaks to donors and appears composed, though some witnesses notice subtle word errors.",
+    "locationId": "grand_atrium",
+    "characterIds": ["simon_vale", "evelyn_vale", "lena_ortiz"],
+    "evidenceIds": ["E045", "E060"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 3
+  },
+  {
+    "id": "pub_2037_daniel_visit",
+    "time": "20:37",
+    "label": "Daniel visits Simon's office",
+    "description": "Daniel gives Simon water and leaves after a brief private exchange.",
+    "locationId": "locked_office",
+    "characterIds": ["simon_vale", "daniel_kwon"],
+    "evidenceIds": ["E009", "E059"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 4
+  },
+  {
+    "id": "pub_2043_rachel",
+    "time": "20:43",
+    "label": "Simon speaks with Rachel",
+    "description": "Rachel notes strange wording but does not treat it as an emergency.",
+    "locationId": "grand_atrium",
+    "characterIds": ["simon_vale", "rachel_ives"],
+    "evidenceIds": ["E043", "E065"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 5
+  },
+  {
+    "id": "pub_2049_email",
+    "time": "20:49",
+    "label": "Incomplete email drafted",
+    "description": "Simon begins an incomplete email referencing C, accounts, and corridor.",
+    "locationId": "locked_office",
+    "characterIds": ["simon_vale"],
+    "evidenceIds": ["E064"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 6
+  },
+  {
+    "id": "pub_2102_locks_office",
+    "time": "21:02",
+    "label": "Office locks from inside",
+    "description": "Door logs show Simon locking the office from inside.",
+    "locationId": "locked_office",
+    "characterIds": ["simon_vale"],
+    "evidenceIds": ["E001"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 7
+  },
+  {
+    "id": "pub_2116_presumed_collapse",
+    "time": "21:16",
+    "label": "Presumed time of fatal office blow",
+    "description": "The initial reconstruction places Simon's collapse near the bronze model around this time.",
+    "locationId": "locked_office",
+    "characterIds": ["simon_vale"],
+    "evidenceIds": ["E002", "E003"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 8
+  },
+  {
+    "id": "pub_2208_found",
+    "time": "22:08",
+    "label": "Simon found dead",
+    "description": "Security opens the locked office under emergency protocol.",
+    "locationId": "locked_office",
+    "characterIds": ["simon_vale", "owen_pike", "rowan_price"],
+    "evidenceIds": ["E001"],
+    "isPublic": true,
+    "isTrue": false,
+    "sortOrder": 9
+  }
+]

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Harlow Institute case floorplan</title>
+  <desc id="desc">A stylized investigation map showing the office, Service Corridor C, atrium, gallery, and security areas.</desc>
+  <rect width="960" height="520" fill="#080b12"/>
+  <path d="M0 0h960v520H0z" fill="#080b12"/>
+  <path d="M80 80h330v140H80z" fill="#182133" stroke="#76d4c7" stroke-opacity=".4" stroke-width="3"/>
+  <path d="M550 72h300v150H550z" fill="#121d2c" stroke="#76d4c7" stroke-opacity=".4" stroke-width="3"/>
+  <path d="M80 320h300v120H80z" fill="#191a27" stroke="#d7a84d" stroke-opacity=".48" stroke-width="3"/>
+  <path d="M475 286h365v82H475z" fill="#101724" stroke="#ff6961" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M475 368h110v72H475z" fill="#201d2a" stroke="#d7a84d" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M650 368h190v72H650z" fill="#112332" stroke="#76d4c7" stroke-opacity=".42" stroke-width="3"/>
+  <path d="M410 145h140v45h-140z" fill="#0f1522" stroke="#76d4c7" stroke-opacity=".45" stroke-width="3"/>
+  <path d="M410 167h140" stroke="#ff6961" stroke-width="6"/>
+  <path d="M610 285v-63" stroke="#eef4f0" stroke-opacity=".42" stroke-width="3" stroke-dasharray="10 9"/>
+  <circle cx="610" cy="286" r="11" fill="#ff6961"/>
+  <circle cx="740" cy="340" r="16" fill="#d7a84d" stroke="#080b12" stroke-width="3"/>
+  <path d="M725 340h30" stroke="#080b12" stroke-width="3"/>
+  <path d="M740 325v30" stroke="#080b12" stroke-width="3"/>
+  <text x="105" y="125" fill="#eef4f0" font-family="Georgia, serif" font-size="30" font-weight="700">Grand Atrium</text>
+  <text x="575" y="120" fill="#eef4f0" font-family="Georgia, serif" font-size="30" font-weight="700">East Gallery</text>
+  <text x="105" y="365" fill="#eef4f0" font-family="Georgia, serif" font-size="28" font-weight="700">Locked Office</text>
+  <text x="500" y="335" fill="#eef4f0" font-family="Georgia, serif" font-size="26" font-weight="700">Service Corridor C</text>
+  <text x="494" y="412" fill="#eef4f0" font-family="Arial, sans-serif" font-size="18" font-weight="700">Storage Alcove</text>
+  <text x="675" y="412" fill="#eef4f0" font-family="Arial, sans-serif" font-size="18" font-weight="700">Control Room</text>
+  <text x="418" y="137" fill="#76d4c7" font-family="Arial, sans-serif" font-size="15" font-weight="700">Public route</text>
+  <text x="640" y="272" fill="#ff6961" font-family="Arial, sans-serif" font-size="17" font-weight="700">7:42 PM strike point</text>
+  <text x="705" y="374" fill="#080b12" font-family="Arial, sans-serif" font-size="14">Memory Arch</text>
+</svg>

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "rel_simon_evelyn",
+    "fromId": "simon_vale",
+    "toId": "evelyn_vale",
+    "type": "family",
+    "label": "Estranged marriage",
+    "description": "Evelyn and Simon maintained a polished public partnership while privately negotiating separation.",
+    "evidenceIds": ["E006", "E034"]
+  },
+  {
+    "id": "rel_simon_jonah",
+    "fromId": "simon_vale",
+    "toId": "jonah_vale",
+    "type": "family",
+    "label": "Fractured father and son",
+    "description": "Jonah blamed Simon for using family pressure to protect the institute's reputation.",
+    "evidenceIds": ["E007", "E036"]
+  },
+  {
+    "id": "rel_simon_daniel",
+    "fromId": "simon_vale",
+    "toId": "daniel_kwon",
+    "type": "romantic",
+    "label": "Secret affair",
+    "description": "Daniel and Simon concealed an intimate relationship that could damage both careers.",
+    "evidenceIds": ["E009", "E037"]
+  },
+  {
+    "id": "rel_simon_lena",
+    "fromId": "simon_vale",
+    "toId": "lena_ortiz",
+    "type": "work",
+    "label": "Succession rivalry",
+    "description": "Lena expected to become director if Simon lost board confidence.",
+    "evidenceIds": ["E014", "E035"]
+  },
+  {
+    "id": "rel_simon_marcus",
+    "fromId": "simon_vale",
+    "toId": "marcus_hale",
+    "type": "conflict",
+    "label": "Ethics dispute",
+    "description": "Marcus accused Simon of burying adverse research outcomes.",
+    "evidenceIds": ["E015", "E038"]
+  },
+  {
+    "id": "rel_simon_mira",
+    "fromId": "simon_vale",
+    "toId": "mira_sol",
+    "type": "conflict",
+    "label": "Former patient activist",
+    "description": "Mira publicly accused Simon of using patient stories without consent.",
+    "evidenceIds": ["E016", "E040"]
+  },
+  {
+    "id": "rel_simon_ezra",
+    "fromId": "simon_vale",
+    "toId": "ezra_cole",
+    "type": "financial",
+    "label": "Donor leverage",
+    "description": "Ezra threatened to pull funding unless Simon protected a naming deal.",
+    "evidenceIds": ["E017", "E042"]
+  },
+  {
+    "id": "rel_clara_simon",
+    "fromId": "clara_finch",
+    "toId": "simon_vale",
+    "type": "work",
+    "label": "Operations pressure",
+    "description": "Clara ran much of the gala machinery while Simon received public credit.",
+    "evidenceIds": ["E044", "E045"]
+  },
+  {
+    "id": "rel_clara_martin",
+    "fromId": "clara_finch",
+    "toId": "martin_finch",
+    "type": "family",
+    "label": "Dependent brother",
+    "description": "Martin's care facility relied on payments Clara kept private.",
+    "evidenceIds": ["E070"]
+  },
+  {
+    "id": "rel_clara_maryam",
+    "fromId": "clara_finch",
+    "toId": "maryam_hart",
+    "type": "work",
+    "label": "Route coordination",
+    "description": "Maryam depended on Clara for last-minute movement plans during the gala.",
+    "evidenceIds": ["E041", "E046"]
+  },
+  {
+    "id": "rel_noah_clara",
+    "fromId": "noah_reed",
+    "toId": "clara_finch",
+    "type": "work",
+    "label": "Exhibit handoff",
+    "description": "Noah's toolkit and the Memory Arch passed through operations control after inspection.",
+    "evidenceIds": ["E023", "E025"]
+  },
+  {
+    "id": "rel_priya_simon",
+    "fromId": "priya_sen",
+    "toId": "simon_vale",
+    "type": "financial",
+    "label": "Payment audit",
+    "description": "Priya alerted Simon to duplicate vendor payments on gala accounts.",
+    "evidenceIds": ["E012", "E064"]
+  },
+  {
+    "id": "rel_keisha_clara",
+    "fromId": "keisha_moore",
+    "toId": "clara_finch",
+    "type": "institutional",
+    "label": "Accessibility work",
+    "description": "Keisha and Clara designed practical accessibility changes later presented under Simon's name.",
+    "evidenceIds": ["E044", "E045"]
+  },
+  {
+    "id": "rel_tessa_corridor",
+    "fromId": "tessa_wynn",
+    "toId": "clara_finch",
+    "type": "institutional",
+    "label": "Incidental photograph",
+    "description": "Tessa's gala photos captured corridor details neither woman expected to matter.",
+    "evidenceIds": ["E039"]
+  }
+]

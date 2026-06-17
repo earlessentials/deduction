@@ -1,0 +1,98 @@
+[
+  {
+    "id": "locked_office",
+    "name": "Simon Vale's Office",
+    "category": "office",
+    "description": "A soundproofed director's office with a self-locking door, glass display shelves, and a heavy bronze brain model on a side plinth.",
+    "floor": "Level 4",
+    "publicNotes": "Initial presumed crime scene. Door locked from inside at discovery."
+  },
+  {
+    "id": "service_corridor_c",
+    "name": "Service Corridor C",
+    "category": "corridor",
+    "description": "A narrow service route between the east gallery, freight access, and temporary exhibit storage.",
+    "floor": "Level 2",
+    "publicNotes": "Staff route used during the gala to move equipment away from donor traffic."
+  },
+  {
+    "id": "grand_atrium",
+    "name": "Grand Atrium",
+    "category": "public",
+    "description": "The gala's public stage and donor reception area.",
+    "floor": "Level 1",
+    "publicNotes": "Multiple speeches and donor appearances were recorded here."
+  },
+  {
+    "id": "east_gallery",
+    "name": "East Gallery",
+    "category": "public",
+    "description": "Interactive exhibition space used for demonstrations during the gala.",
+    "floor": "Level 2",
+    "publicNotes": "Daniel Kwon led a demonstration here during the key window."
+  },
+  {
+    "id": "loading_dock",
+    "name": "Loading Dock",
+    "category": "service",
+    "description": "Freight entrance used by fabricators, caterers, and event staff.",
+    "floor": "Ground",
+    "publicNotes": "Noah Reed's crew staged equipment here."
+  },
+  {
+    "id": "glass_elevator",
+    "name": "Glass Elevator",
+    "category": "public",
+    "description": "A visible elevator overlooking the atrium.",
+    "floor": "Levels 1-4",
+    "publicNotes": "A mechanical stall briefly trapped Jonah Vale."
+  },
+  {
+    "id": "control_room",
+    "name": "Security Control Room",
+    "category": "security",
+    "description": "Camera monitoring station run by security staff.",
+    "floor": "Level 1",
+    "publicNotes": "Owen Pike monitored access alerts from this room."
+  },
+  {
+    "id": "dual_access_lab",
+    "name": "Dual-Access Laboratory",
+    "category": "restricted",
+    "description": "A secured lab that requires two credentialed people to enter or exit.",
+    "floor": "Level 3",
+    "publicNotes": "Used for ethics demonstrations and locked sample cabinets."
+  },
+  {
+    "id": "south_plaza",
+    "name": "South Plaza",
+    "category": "exterior",
+    "description": "Outdoor plaza where protesters and press gathered outside the gala entrance.",
+    "floor": "Exterior",
+    "publicNotes": "Mira Sol was documented here during the fatal window."
+  },
+  {
+    "id": "corridor_storage_alcove",
+    "name": "Corridor Storage Alcove",
+    "category": "service",
+    "description": "A shallow locked alcove beside Service Corridor C, used for temporary event supplies and exhibit tools.",
+    "floor": "Level 2",
+    "publicNotes": "Access is logged by staff lanyard."
+  },
+  {
+    "id": "donor_lounge",
+    "name": "Donor Lounge",
+    "category": "public",
+    "description": "Private sponsor reception room near the atrium.",
+    "floor": "Level 1",
+    "publicNotes": "Several messages claimed Simon was needed here."
+  },
+  {
+    "id": "medical_suite",
+    "name": "Institute Medical Suite",
+    "category": "medical",
+    "description": "Small clinic space used for guest emergencies and research screenings.",
+    "floor": "Level 1",
+    "publicNotes": "Emergency physician Sophie Park was a gala guest, not assigned staff."
+  }
+]

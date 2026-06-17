@@ -1,0 +1,191 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Case {
+  id            String   @id
+  title         String
+  subtitle      String
+  summary       String
+  initialTheory String
+  briefingJson  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  characters         Character[]
+  locations          Location[]
+  evidence           Evidence[]
+  interviews         Interview[]
+  timelineEvents     TimelineEvent[]
+  relationships      Relationship[]
+  hypotheses         Hypothesis[]
+  eliminations       SuspectElimination[]
+  finalAccusations   FinalAccusation[]
+  solutionValidators SolutionValidator[]
+}
+
+model Character {
+  id                   String @id
+  caseId               String
+  name                 String
+  role                 String
+  relationshipToVictim String
+  suspectStatus        String
+  unlockState          String
+  portraitPath         String?
+  bio                  String
+  motive               String
+  secretsJson          String
+  statementsJson       String
+  knownTimelineJson    String
+  relatedEvidenceJson  String
+
+  case       Case        @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  interviews Interview[]
+}
+
+model Location {
+  id          String @id
+  caseId      String
+  name        String
+  category    String
+  description String
+  floor       String
+  publicNotes String
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model Evidence {
+  id                         String  @id
+  caseId                     String
+  title                      String
+  category                   String
+  description                String
+  unlockedBy                 String
+  relatedCharactersJson      String
+  relatedLocationsJson       String
+  significance               String
+  possibleInterpretationsJson String
+  isCritical                 Boolean @default(false)
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model Interview {
+  id          String @id
+  caseId      String
+  characterId String
+  title       String
+  phase       String
+  description String
+
+  case      Case            @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  character Character       @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  nodes     InterviewNode[]
+}
+
+model InterviewNode {
+  id                   String @id
+  interviewId          String
+  prompt               String
+  response             String
+  choicesJson          String
+  requiredEvidenceJson String
+  unlocksEvidenceJson  String
+  sortOrder            Int
+
+  interview Interview @relation(fields: [interviewId], references: [id], onDelete: Cascade)
+}
+
+model TimelineEvent {
+  id               String  @id
+  caseId           String
+  time             String
+  label            String
+  description      String
+  locationId       String?
+  characterIdsJson String
+  evidenceIdsJson  String
+  isPublic         Boolean @default(false)
+  isTrue           Boolean @default(false)
+  sortOrder        Int
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model Relationship {
+  id              String @id
+  caseId          String
+  fromId          String
+  toId            String
+  type            String
+  label           String
+  description     String
+  evidenceIdsJson String
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model Hypothesis {
+  id              String @id
+  caseId          String
+  title           String
+  description     String
+  suggestedStatus String
+  evidenceIdsJson String
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model SuspectElimination {
+  id                  String  @id
+  caseId              String
+  characterId          String
+  publicReason         String
+  requiredEvidenceJson String
+  isMajorAlternative   Boolean @default(false)
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model FinalAccusation {
+  id                    String   @id @default(cuid())
+  caseId                String
+  culpritId             String
+  locationId            String
+  fatalTime             String
+  method                String
+  motive                String
+  rejectsOfficeWeapon   Boolean  @default(false)
+  misleadingExplanation String
+  requiredEvidenceJson  String
+  eliminatedSuspectsJson String
+  writtenExplanation    String
+  isCorrect             Boolean  @default(false)
+  feedbackJson          String
+  createdAt             DateTime @default(now())
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}
+
+model SolutionValidator {
+  id                    String @id
+  caseId                String
+  culpritId             String
+  locationId            String
+  acceptedStartTime     String
+  acceptedEndTime       String
+  method                String
+  motiveKeywordsJson    String
+  requiredEvidenceJson  String
+  requiredEliminationsJson String
+  hiddenExplanation     String
+
+  case Case @relation(fields: [caseId], references: [id], onDelete: Cascade)
+}

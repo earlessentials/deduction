@@ -1,0 +1,85 @@
+{
+  "id": "case_001_lucid_hour",
+  "title": "THE LUCID HOUR",
+  "subtitle": "Case 001",
+  "summary": "Dr. Simon Vale dies during the Harlow Institute gala after apparently collapsing in his locked office beside a bloodied bronze brain model.",
+  "initialTheory": "The office appears to be the murder scene. The first working theory is that Simon was struck around 9:16 PM after locking himself inside.",
+  "briefing": {
+    "date": "Gala night",
+    "victim": "Dr. Simon Vale",
+    "setting": "The Harlow Institute, a private behavioral neurology institute hosting its annual donor gala.",
+    "foundAt": "10:08 PM",
+    "presumedDeathTime": "9:16 PM",
+    "initialCrimeScene": "Simon Vale's locked office",
+    "misleadingWeapon": "A bronze brain model found near the body with blood on it.",
+    "publicFacts": [
+      "Simon was seen alive after the gala speech.",
+      "His office door was locked from the inside when he was found.",
+      "The bronze brain model carried visible blood transfer.",
+      "Several guests, staff, and family members had reasons to resent him."
+    ],
+    "initialSuspects": [
+      "evelyn_vale",
+      "jonah_vale",
+      "lena_ortiz",
+      "marcus_hale",
+      "mira_sol",
+      "ezra_cole",
+      "noah_reed",
+      "owen_pike",
+      "daniel_kwon",
+      "clara_finch"
+    ]
+  },
+  "suggestedHypotheses": [
+    {
+      "id": "hyp_office_killing",
+      "title": "Simon was killed in the office.",
+      "description": "The locked door and bronze model make the office look like the primary scene.",
+      "suggestedStatus": "possible",
+      "evidenceIds": ["E001", "E002", "E003"]
+    },
+    {
+      "id": "hyp_bronze_weapon",
+      "title": "The bronze model was the murder weapon.",
+      "description": "The model has blood transfer, but the injury pattern needs to match.",
+      "suggestedStatus": "possible",
+      "evidenceIds": ["E002", "E005"]
+    },
+    {
+      "id": "hyp_prior_injury",
+      "title": "Simon was injured before entering the office.",
+      "description": "Medical and behavioral clues suggest a dangerous interval before collapse.",
+      "suggestedStatus": "probable",
+      "evidenceIds": ["E004", "E018", "E043"]
+    },
+    {
+      "id": "hyp_arch_cause",
+      "title": "The Memory Arch caused the fatal injury.",
+      "description": "The exhibit's missing protective edge and timing point away from the office.",
+      "suggestedStatus": "probable",
+      "evidenceIds": ["E021", "E023", "E031"]
+    },
+    {
+      "id": "hyp_corridor_intentional",
+      "title": "The corridor accident was intentional.",
+      "description": "A tool sign-out, fiber transfer, and access logs make sabotage plausible.",
+      "suggestedStatus": "probable",
+      "evidenceIds": ["E025", "E032", "E049"]
+    },
+    {
+      "id": "hyp_false_message",
+      "title": "Someone created the false donor message.",
+      "description": "The message redirected Simon into a vulnerable route.",
+      "suggestedStatus": "probable",
+      "evidenceIds": ["E041", "E046"]
+    },
+    {
+      "id": "hyp_financial_motive",
+      "title": "A financial scandal motivated the attack.",
+      "description": "Payment trails and private drafts suggest Simon had identified an internal problem.",
+      "suggestedStatus": "possible",
+      "evidenceIds": ["E012", "E064", "E070"]
+    }
+  ]
+}

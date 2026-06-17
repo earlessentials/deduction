@@ -1,0 +1,507 @@
+[
+  {
+    "id": "interview_clara_1",
+    "characterId": "clara_finch",
+    "title": "Clara Finch - Interview 1",
+    "phase": "helpful and precise",
+    "description": "Clara gives efficient operational answers and seems eager to stabilize the investigation.",
+    "nodes": [
+      {
+        "id": "clara1_start",
+        "prompt": "Walk me through your gala role.",
+        "response": "Operations. Routes, vendors, doors, equipment, staff breaks. If anything moved, I probably knew about it.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Ask about Simon's route changes.", "nextNodeId": "clara1_routes", "requiresEvidence": [], "unlocksEvidence": [] },
+          { "label": "Ask about the Memory Arch.", "nextNodeId": "clara1_arch", "requiresEvidence": [], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara1_routes",
+        "prompt": "Who knew Simon's alternate route?",
+        "response": "Maryam handled his calendar, I handled the building routes. The alternate path was normal for donor nights because Simon hated crowded halls.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Ask why Service Corridor C mattered.", "nextNodeId": "clara1_corridor", "requiresEvidence": [], "unlocksEvidence": ["E067"] },
+          { "label": "Return to opening questions.", "nextNodeId": "clara1_start", "requiresEvidence": [], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara1_arch",
+        "prompt": "Was the Memory Arch dangerous?",
+        "response": "Noah was careful. I remember it being checked. But gala installs are chaos. Anything can become dangerous if people improvise.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present Noah's inspection photo.", "nextNodeId": "clara1_noah_photo", "requiresEvidence": ["E023"], "unlocksEvidence": [] },
+          { "label": "Ask about operations tools.", "nextNodeId": "clara1_tools", "requiresEvidence": [], "unlocksEvidence": ["E025"] }
+        ]
+      },
+      {
+        "id": "clara1_corridor",
+        "prompt": "Why was the arch placed in Service Corridor C?",
+        "response": "Temporary staging. Lucas was available and the corridor was out of donor sight. It should have been harmless.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E067"],
+        "choices": [
+          { "label": "Ask who checked it after Lucas moved it.", "nextNodeId": "clara1_after_move", "requiresEvidence": [], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara1_tools",
+        "prompt": "Why did you sign out Noah's toolkit?",
+        "response": "Cable covers, signage clamps, minor event fixes. If I waited for every contractor, the gala would never open.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E025"],
+        "choices": [
+          { "label": "Ask if you touched the Memory Arch.", "nextNodeId": "clara1_touch", "requiresEvidence": [], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara1_noah_photo",
+        "prompt": "Noah's photo shows the protective edge present at 5:55 PM.",
+        "response": "Good. Then whatever happened after that belongs to the event floor, not Noah's shop.",
+        "requiredEvidence": ["E023"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Ask who controlled the event floor.", "nextNodeId": "clara1_touch", "requiresEvidence": [], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara1_after_move",
+        "prompt": "Who checked the arch after Lucas moved it?",
+        "response": "I cannot swear anyone did. We were understaffed. That is exactly why I hate last-minute program changes.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": []
+      },
+      {
+        "id": "clara1_touch",
+        "prompt": "Did you touch the Memory Arch?",
+        "response": "I handled the area, not the mechanism. There is a difference.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_clara_2",
+    "characterId": "clara_finch",
+    "title": "Clara Finch - Interview 2",
+    "phase": "defensive about corridor",
+    "description": "Clara becomes precise in ways that sound rehearsed when the corridor evidence narrows.",
+    "nodes": [
+      {
+        "id": "clara2_start",
+        "prompt": "You said your alibi near catering was continuous.",
+        "response": "Because functionally it was. Ana saw me repeatedly. I was solving ten problems at once.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present storage alcove access.", "nextNodeId": "clara2_alcove", "requiresEvidence": ["E049"], "unlocksEvidence": [] },
+          { "label": "Ask about Simon after the corridor strike.", "nextNodeId": "clara2_conscious", "requiresEvidence": [], "unlocksEvidence": ["E083"] }
+        ]
+      },
+      {
+        "id": "clara2_alcove",
+        "prompt": "Your badge entered the corridor storage alcove at 7:04 PM.",
+        "response": "I retrieved supplies. That was my job. An access log is not a confession.",
+        "requiredEvidence": ["E049"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present the missing protective edge.", "nextNodeId": "clara2_edge", "requiresEvidence": ["E021"], "unlocksEvidence": [] },
+          { "label": "Ask what supplies you retrieved.", "nextNodeId": "clara2_supplies", "requiresEvidence": [], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara2_edge",
+        "prompt": "The Memory Arch's protective edge was missing after that window.",
+        "response": "Then ask the fabricator, maintenance, or the volunteer who moved it. Operations does not mean omnipotence.",
+        "requiredEvidence": ["E021"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present lanyard fiber comparison.", "nextNodeId": "clara2_fiber", "requiresEvidence": ["E032"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara2_fiber",
+        "prompt": "A fiber on the removed edge matches your staff lanyard.",
+        "response": "My lanyard touches half this building. That is the problem with a job no one notices until it breaks.",
+        "requiredEvidence": ["E032"],
+        "unlocksEvidence": [],
+        "choices": []
+      },
+      {
+        "id": "clara2_supplies",
+        "prompt": "What supplies did you retrieve?",
+        "response": "Tape, spare clips, a sign bracket. I did not keep a poetry inventory.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": []
+      },
+      {
+        "id": "clara2_conscious",
+        "prompt": "Why did you discourage Sophie from treating Simon?",
+        "response": "Because Simon was conscious. He answered questions. He never lost consciousness. The gala could not stop over every bump.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E083"],
+        "choices": [
+          { "label": "Present lucid interval medical note.", "nextNodeId": "clara2_lucid", "requiresEvidence": ["E018"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara2_lucid",
+        "prompt": "A lucid interval can look normal before a collapse.",
+        "response": "I am not a doctor. Neither were most people treating the corridor like theater.",
+        "requiredEvidence": ["E018"],
+        "unlocksEvidence": [],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_clara_3",
+    "characterId": "clara_finch",
+    "title": "Clara Finch - Interview 3",
+    "phase": "financial pressure",
+    "description": "Clara answers questions about accounts and Martin but denies any violent act.",
+    "nodes": [
+      {
+        "id": "clara3_start",
+        "prompt": "Simon was reviewing duplicate vendor payments.",
+        "response": "Simon reviewed many things he barely understood. He liked dramatic conclusions.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present police referral draft.", "nextNodeId": "clara3_referral", "requiresEvidence": ["E064"], "unlocksEvidence": [] },
+          { "label": "Ask about Martin Finch.", "nextNodeId": "clara3_martin", "requiresEvidence": ["E070"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara3_referral",
+        "prompt": "The referral draft names you.",
+        "response": "Yes. I moved funds. I will not polish that. I was trying to keep Martin alive and housed. That is not the same as murder.",
+        "requiredEvidence": ["E064"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present Martin's care warning.", "nextNodeId": "clara3_care", "requiresEvidence": ["E070"], "unlocksEvidence": [] },
+          { "label": "Ask whether Simon threatened you.", "nextNodeId": "clara3_threat", "requiresEvidence": [], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara3_martin",
+        "prompt": "Martin's care facility threatened termination.",
+        "response": "He cannot advocate for himself. I made terrible choices. I can say that without accepting your larger story.",
+        "requiredEvidence": ["E070"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present referral draft.", "nextNodeId": "clara3_referral", "requiresEvidence": ["E064"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "clara3_care",
+        "prompt": "The care warning makes the payments urgent.",
+        "response": "It makes them desperate. Desperation is not a time machine, detective.",
+        "requiredEvidence": ["E070"],
+        "unlocksEvidence": [],
+        "choices": []
+      },
+      {
+        "id": "clara3_threat",
+        "prompt": "Did Simon threaten to fire or report you?",
+        "response": "He said the gala would end and then my career would end. He did not have to spell out the rest.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_clara_final",
+    "characterId": "clara_finch",
+    "title": "Clara Finch - Final Interview",
+    "phase": "evidence sequence",
+    "description": "A gated confrontation sequence. The order matters: route, message, corridor presence, altered exhibit, motive, alibi.",
+    "nodes": [
+      {
+        "id": "claraf_start",
+        "prompt": "Start with the route.",
+        "response": "If you cannot explain how Simon reached Corridor C, you do not have a case.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present the false donor message.", "nextNodeId": "claraf_message", "requiresEvidence": ["E041"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "claraf_message",
+        "prompt": "The donor message redirected Simon.",
+        "response": "A false message is ugly, but the institute lived on urgent donor messages.",
+        "requiredEvidence": ["E041"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present Clara's abbreviation pattern.", "nextNodeId": "claraf_abbrev", "requiresEvidence": ["E046"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "claraf_abbrev",
+        "prompt": "The message uses your shorthand.",
+        "response": "Half the staff copied my route codes because half the staff needed me to do their jobs.",
+        "requiredEvidence": ["E046"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present storage alcove access.", "nextNodeId": "claraf_access", "requiresEvidence": ["E049"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "claraf_access",
+        "prompt": "Your badge entered the storage alcove before the strike.",
+        "response": "Again, access is not intent.",
+        "requiredEvidence": ["E049"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present missing edge and Noah's inspection photo.", "nextNodeId": "claraf_arch", "requiresEvidence": ["E021", "E023"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "claraf_arch",
+        "prompt": "The edge was safe at 5:55 PM and missing after your alcove window.",
+        "response": "You have a change. You still need a hand.",
+        "requiredEvidence": ["E021", "E023"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present lanyard fiber and reflective photo.", "nextNodeId": "claraf_presence", "requiresEvidence": ["E032", "E039"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "claraf_presence",
+        "prompt": "Fiber links your lanyard to the edge, and the photo places you near the corridor.",
+        "response": "A building full of reflections and fibers. You know how small that sounds?",
+        "requiredEvidence": ["E032", "E039"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present the referral draft and Martin's care warning.", "nextNodeId": "claraf_motive", "requiresEvidence": ["E064", "E070"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "claraf_motive",
+        "prompt": "Simon planned to report you, and Martin's care payments were at risk.",
+        "response": "I said I moved funds. I said why. I did not say I wanted Simon dead.",
+        "requiredEvidence": ["E064", "E070"],
+        "unlocksEvidence": [],
+        "choices": [
+          { "label": "Present Clara's statement and Ana's retraction.", "nextNodeId": "claraf_alibi", "requiresEvidence": ["E083", "E087"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "claraf_alibi",
+        "prompt": "Your alibi was not continuous, and your own words fit a lucid interval.",
+        "response": "Then write your report carefully. A theory this complicated breaks if any part is guesswork.",
+        "requiredEvidence": ["E083", "E087"],
+        "unlocksEvidence": [],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_maryam",
+    "characterId": "maryam_hart",
+    "title": "Maryam Hart",
+    "phase": "route witness",
+    "description": "Maryam explains how Simon was redirected.",
+    "nodes": [
+      {
+        "id": "maryam_start",
+        "prompt": "Why did Simon go through Service Corridor C?",
+        "response": "A donor message came in. It said Ezra needed a private word, and Corridor C was the fastest uncrowded path.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E041"],
+        "choices": [
+          { "label": "Ask who knew the alternate route.", "nextNodeId": "maryam_route", "requiresEvidence": [], "unlocksEvidence": [] },
+          { "label": "Present Clara's route question.", "nextNodeId": "maryam_clara", "requiresEvidence": ["E046"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "maryam_route",
+        "prompt": "Who knew Simon used that route?",
+        "response": "I did. Clara did. Security knew generally, but Clara knew the practical timing.",
+        "requiredEvidence": [],
+        "unlocksEvidence": [],
+        "choices": []
+      },
+      {
+        "id": "maryam_clara",
+        "prompt": "The shorthand resembles Clara's operations messages.",
+        "response": "I noticed that later. At the time it looked normal because her shorthand was everywhere.",
+        "requiredEvidence": ["E046"],
+        "unlocksEvidence": [],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_noah",
+    "characterId": "noah_reed",
+    "title": "Noah Reed",
+    "phase": "exhibit safety",
+    "description": "Noah protects his inspection chain and points toward later handling.",
+    "nodes": [
+      {
+        "id": "noah_start",
+        "prompt": "Was the Memory Arch safe when you left it?",
+        "response": "Yes. I photographed it because this place loves last-minute blame. Protective edge on, brake stop checked.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E023"],
+        "choices": [
+          { "label": "Ask about your toolkit.", "nextNodeId": "noah_toolkit", "requiresEvidence": [], "unlocksEvidence": ["E025"] },
+          { "label": "Present missing protective edge.", "nextNodeId": "noah_edge", "requiresEvidence": ["E021"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "noah_toolkit",
+        "prompt": "Who used your toolkit after inspection?",
+        "response": "Operations signed it out. Clara's name is on the line. That does not mean she broke anything, but it was not with me.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E025"],
+        "choices": []
+      },
+      {
+        "id": "noah_edge",
+        "prompt": "The edge was missing after the strike.",
+        "response": "Then someone removed it. It is not the kind of part that falls off because the building is moody.",
+        "requiredEvidence": ["E021"],
+        "unlocksEvidence": [],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_sophie",
+    "characterId": "sophie_park",
+    "title": "Sophie Park",
+    "phase": "medical witness",
+    "description": "Sophie connects the corridor incident to medical risk.",
+    "nodes": [
+      {
+        "id": "sophie_start",
+        "prompt": "What did you see after the corridor incident?",
+        "response": "Simon was upright, but that can be deceptive. He hesitated, steadied himself, and refused help after Clara said he was fine.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E062"],
+        "choices": [
+          { "label": "Ask about lucid intervals.", "nextNodeId": "sophie_lucid", "requiresEvidence": [], "unlocksEvidence": ["E018"] },
+          { "label": "Ask about Clara's reaction.", "nextNodeId": "sophie_clara", "requiresEvidence": [], "unlocksEvidence": ["E083"] }
+        ]
+      },
+      {
+        "id": "sophie_lucid",
+        "prompt": "Could he stay conscious and deteriorate later?",
+        "response": "Yes. That is exactly why I offered help. Consciousness is not clearance.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E018"],
+        "choices": []
+      },
+      {
+        "id": "sophie_clara",
+        "prompt": "What did Clara say?",
+        "response": "That Simon never lost consciousness and the program needed him. It sounded practical at the time.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E083"],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_ana",
+    "characterId": "ana_brooks",
+    "title": "Ana Brooks",
+    "phase": "alibi pressure",
+    "description": "Ana clarifies that Clara's alibi was intermittent.",
+    "nodes": [
+      {
+        "id": "ana_start",
+        "prompt": "Was Clara with you continuously?",
+        "response": "I said that because she asked me to keep it simple. But no. I saw her several times, not every minute.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E087"],
+        "choices": [
+          { "label": "Ask about service gaps.", "nextNodeId": "ana_gaps", "requiresEvidence": [], "unlocksEvidence": ["E061"] }
+        ]
+      },
+      {
+        "id": "ana_gaps",
+        "prompt": "How long were the gaps?",
+        "response": "Long enough to fetch things. Long enough that I should not have used the word continuous.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E061"],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_priya",
+    "characterId": "priya_sen",
+    "title": "Priya Sen",
+    "phase": "finance trail",
+    "description": "Priya reconstructs Simon's afternoon discovery.",
+    "nodes": [
+      {
+        "id": "priya_start",
+        "prompt": "What did you send Simon at 3:10 PM?",
+        "response": "A ledger note. Duplicate vendor payments. I thought it was sloppy coding until I saw the destination chain.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E012"],
+        "choices": [
+          { "label": "Ask what Simon did next.", "nextNodeId": "priya_simon", "requiresEvidence": [], "unlocksEvidence": ["E064"] },
+          { "label": "Ask about Martin's facility.", "nextNodeId": "priya_martin", "requiresEvidence": ["E070"], "unlocksEvidence": [] }
+        ]
+      },
+      {
+        "id": "priya_simon",
+        "prompt": "How quickly did Simon understand it?",
+        "response": "Fast. By 3:24 he had followed the trail. By the end of the afternoon he was using words like termination and referral.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E064"],
+        "choices": []
+      },
+      {
+        "id": "priya_martin",
+        "prompt": "Why would those payments matter?",
+        "response": "The destination names were layered, but one account connected to Martin Finch's care facility.",
+        "requiredEvidence": ["E070"],
+        "unlocksEvidence": [],
+        "choices": []
+      }
+    ]
+  },
+  {
+    "id": "interview_tessa",
+    "characterId": "tessa_wynn",
+    "title": "Tessa Wynn",
+    "phase": "photo reconstruction",
+    "description": "Tessa's photos compress the corridor window.",
+    "nodes": [
+      {
+        "id": "tessa_start",
+        "prompt": "What did your corridor photos show?",
+        "response": "At 6:52 PM the arch still had its edge. Later, a polished sign caught a reflection I almost deleted.",
+        "requiredEvidence": [],
+        "unlocksEvidence": ["E031", "E060"],
+        "choices": [
+          { "label": "Enhance the reflection.", "nextNodeId": "tessa_reflection", "requiresEvidence": ["E031"], "unlocksEvidence": ["E039"] }
+        ]
+      },
+      {
+        "id": "tessa_reflection",
+        "prompt": "Who appears in the reflection?",
+        "response": "It is not a portrait. But the height, blouse, and lanyard match Clara near the corridor at 7:41 PM.",
+        "requiredEvidence": ["E031"],
+        "unlocksEvidence": ["E039"],
+        "choices": []
+      }
+    ]
+  }
+]

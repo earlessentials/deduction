@@ -1,0 +1,78 @@
+{
+  "caseId": "case_001_lucid_hour",
+  "culpritId": "clara_finch",
+  "locationId": "service_corridor_c",
+  "acceptedStartTime": "19:40",
+  "acceptedEndTime": "19:45",
+  "method": "intentional_memory_arch_collision",
+  "motiveKeywords": [
+    ["criminal referral", "police referral", "law enforcement", "reported"],
+    ["Martin", "brother", "care facility", "care payments", "termination warning", "protect Martin"],
+    ["funds", "financial fraud", "redirected payments", "duplicate vendor payments", "accounts"]
+  ],
+  "requiredEvidenceIds": [
+    "E004",
+    "E005",
+    "E018",
+    "E021",
+    "E023",
+    "E025",
+    "E032",
+    "E039",
+    "E041",
+    "E046",
+    "E049",
+    "E064",
+    "E070",
+    "E083",
+    "E087"
+  ],
+  "requiredEliminations": [
+    {
+      "characterId": "evelyn_vale",
+      "publicReason": "Evelyn was on stage during the true fatal event.",
+      "requiredEvidenceIds": ["E034", "E051"]
+    },
+    {
+      "characterId": "jonah_vale",
+      "publicReason": "Jonah was trapped in the glass elevator.",
+      "requiredEvidenceIds": ["E036", "E052"]
+    },
+    {
+      "characterId": "lena_ortiz",
+      "publicReason": "Lena was speaking live before the audience.",
+      "requiredEvidenceIds": ["E035", "E053"]
+    },
+    {
+      "characterId": "marcus_hale",
+      "publicReason": "Marcus was in the dual-access laboratory.",
+      "requiredEvidenceIds": ["E038", "E054"]
+    },
+    {
+      "characterId": "mira_sol",
+      "publicReason": "Mira was outside the building.",
+      "requiredEvidenceIds": ["E040", "E055"]
+    },
+    {
+      "characterId": "ezra_cole",
+      "publicReason": "Ezra had already left.",
+      "requiredEvidenceIds": ["E042", "E056"]
+    },
+    {
+      "characterId": "noah_reed",
+      "publicReason": "Noah was at the loading dock and left the exhibit safe.",
+      "requiredEvidenceIds": ["E023", "E057"]
+    },
+    {
+      "characterId": "owen_pike",
+      "publicReason": "Owen was in the control room.",
+      "requiredEvidenceIds": ["E019"]
+    },
+    {
+      "characterId": "daniel_kwon",
+      "publicReason": "Daniel was leading the East Gallery demonstration.",
+      "requiredEvidenceIds": ["E037"]
+    }
+  ],
+  "hiddenExplanation": "Clara Finch redirected Simon into Service Corridor C after sabotaging the Memory Arch. The fatal injury occurred at 7:42 PM, followed by a lucid interval. The office wound was secondary after collapse."
+}
