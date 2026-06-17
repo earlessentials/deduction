@@ -1,0 +1,38 @@
+name: Unpack Lucid Hour MVP
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Download project archive
+        run: curl -L --fail --retry 3 "https://tmpfiles.org/dl/wIwGLn55Ymb4/lucid-hour-mvp.zip" -o /tmp/lucid-hour-mvp.zip
+
+      - name: Unpack source tree
+        run: |
+          unzip -o /tmp/lucid-hour-mvp.zip -d .
+          rm -f /tmp/lucid-hour-mvp.zip
+
+      - name: Commit unpacked source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No source changes to commit."
+            exit 0
+          fi
+          git commit -m "Add Lucid Hour MVP"
+          git push
